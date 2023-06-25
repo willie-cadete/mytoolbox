@@ -7,9 +7,9 @@ phases:
     commands:
       - pip install --upgrade pip
       - pip install pipenv
-	pre_build:
-	  commands:
-	    - echo "pipenv install --dev --system --skip-lock"
+  pre_build:
+    commands:
+      - echo "pipenv install --dev --system --skip-lock"
   build:
     commands:
       - echo "Build python setup.py build"
