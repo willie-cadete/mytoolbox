@@ -13,8 +13,6 @@ phases:
   build:
     commands:
       - echo "Build python setup.py build"
-  test:
-    commands:
       - echo "pytest tests/"
   package:
     commands:
