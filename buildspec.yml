@@ -14,7 +14,7 @@ phases:
     commands:
       - echo "Build python setup.py build"
       - echo "pytest tests/"
-  post-build:
+  post_build:
     commands:
       - echo "pipenv python setup.py sdist bdist_wheel"
 artifacts:
