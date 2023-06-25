@@ -20,3 +20,7 @@ phases:
 artifacts:
   files:
     - dist/*  # Uploads all files under the 'dist' directory as artifacts
+cache:
+  paths:
+    - ~/.cache/pip
+    - .venv
