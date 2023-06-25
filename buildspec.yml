@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip install --upgrade pip
+      - pip install pipenv
+	pre_build:
+	  commands:
+	    - echo "pipenv install --dev --system --skip-lock"
+  build:
+    commands:
+      - echo "Build python setup.py build"
+  test:
+    commands:
+      - echo "pytest tests/"
+  package:
+    commands:
+      - echo "pipenv python setup.py sdist bdist_wheel"
+artifacts:
+  files:
+    - dist/*  # Uploads all files under the 'dist' directory as artifacts
