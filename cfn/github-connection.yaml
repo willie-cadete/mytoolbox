@@ -1,0 +1,14 @@
+Description: Integrates thw AWS services to GitHub
+
+Parameters:
+  GitHubAccount:
+    Description: The owner or organization who own the GitHub repositories.
+    Type: String
+    Default: GitHubOwner
+
+Resources:
+  GitHubConnection:
+    Type: 'AWS::CodeStarConnections::Connection'
+    Properties:
+      ConnectionName: !Ref GitHubAccount
+      ProviderType: GitHub
