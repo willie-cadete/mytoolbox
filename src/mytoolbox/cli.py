@@ -3,7 +3,7 @@ from typing import Optional
 
 from mytoolbox import __app_name__, __version__
 
-app = typer.Typer(add_completion=False)
+app = typer.Typer(add_completion=False, no_args_is_help=True)
 
 
 def _version_callback(value: bool) -> None:
@@ -24,6 +24,3 @@ def main(
     )
 ) -> None:
     return
-
-
-app()
