@@ -12,11 +12,11 @@ phases:
       - pipenv install --dev --system --skip-lock
   build:
     commands:
-      - echo "Build python setup.py build"
-      - echo "pytest tests/"
+      - pipenv run flit install --symlock
+      - pipenv run pytest tests/
   post_build:
     commands:
-      - echo "pipenv python setup.py sdist bdist_wheel"
+      - pipenv run flit build --format wheel
 artifacts:
   files:
     - dist/*  # Uploads all files under the 'dist' directory as artifacts
