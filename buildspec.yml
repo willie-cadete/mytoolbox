@@ -12,7 +12,7 @@ phases:
       - pipenv install --dev --system --skip-lock
   build:
     commands:
-      - pipenv run flit install --symlock
+      - pipenv run flit install --symlink
       - pipenv run pytest tests/
   post_build:
     commands:
