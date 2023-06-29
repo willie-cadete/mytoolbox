@@ -9,6 +9,13 @@ typer = "*"
 [dev-packages]
 pytest = "*"
 flit = "*"
+flake8 = "*"
+mypy = "*"
+isort = "*"
+black = "*"
+ipython = "*"
+bpython = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3.11"
