@@ -16,6 +16,8 @@ black = "*"
 ipython = "*"
 bpython = "*"
 pre-commit = "*"
+mkdocs-material = "*"
+mkdocstrings-python = "*"
 
 [requires]
 python_version = "3.11"

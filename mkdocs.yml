@@ -1,0 +1,28 @@
+site_name: MyToolbox
+site_description: A CLI to automate boring stuff on a daily basis
+
+theme:
+  name: material
+  palette:
+    primary: black
+    accent: teal
+  icon:
+    repo: fontawesome/brands/github-alt
+
+repo_name: willie-cadete/mytoolbox
+repo_url: https://github.com/willie-cadete/mytoolbox
+
+plugins:
+  - mkdocstrings
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/willie-cadete/mytoolbox
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/williecadete
+    - icon: fontawesome/solid/globe
+      link: https://willielima.me
+
+nav:
+  - Home: index.md
