@@ -29,7 +29,7 @@ Resources:
     Type: 'AWS::CodePipeline::Pipeline'
     Properties:
       Name: !Ref ProjectName
-      RoleArn: !GetAtt 
+      RoleArn: !GetAtt
         - CodePipelineServiceRole
         - Arn
       Stages:
