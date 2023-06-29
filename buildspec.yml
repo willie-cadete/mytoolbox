@@ -15,12 +15,15 @@ phases:
     commands:
       - pipenv run flit install --symlink
       - pipenv run pytest tests/
+      - pipenv run mkdocs build --clean
   post_build:
     commands:
       - pipenv run flit build --format wheel
+      - pipen run mkdocs gh-deploy --clean --force
 artifacts:
   files:
-    - dist/*  # Uploads all files under the 'dist' directory as artifacts
+    - dist/*
+    - site/*
 cache:
   paths:
     - ~/.cache/pip
