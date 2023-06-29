@@ -1,4 +1,5 @@
 from typer.testing import CliRunner
+
 from mytoolbox import __app_name__, __version__, cli
 
 runner = CliRunner()

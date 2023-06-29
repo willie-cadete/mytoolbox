@@ -1,5 +1,6 @@
-import typer
 from typing import Optional
+
+import typer
 
 from mytoolbox import __app_name__, __version__
 
@@ -21,6 +22,6 @@ def main(
         help="Show the application's version and exit.",
         callback=_version_callback,
         is_eager=True,
-    )
+    ),
 ) -> None:
     return
