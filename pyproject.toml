@@ -17,9 +17,14 @@ dependencies = [
     "typer==0.9.0",
 ]
 
-
 [project.urls]
 Home = "https://github.com/willie-cadete/mytoolbox"
 
 [project.scripts]
 mytoolbox = "mytoolbox.cli:app"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
