@@ -1,6 +1,6 @@
 # mytoolbox
 
-MyToolbox is a tool to automate boring stuff on a daily basis of a system engineer or developer.
+MyToolbox is a CLI to automate boring stuff on a daily basis of a system engineer or developer.
 
 ## Project task tracking / todo list
 
@@ -19,8 +19,8 @@ MyToolbox is a tool to automate boring stuff on a daily basis of a system engine
 See [usage](https://#) page
 for details, but here\'s a demo of how it works:
 
-        Usage: mytoolbox [OPTIONS] COMMAND [ARGS]...
+    Usage: mytoolbox [OPTIONS] COMMAND [ARGS]...
 
-        Options:
-        -v, --version  Show the application's version and exit.
-        --help         Show this message and exit.
+    Options:
+    -v, --version  Show the application's version and exit.
+    --help         Show this message and exit.
