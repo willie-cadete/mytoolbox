@@ -1,4 +1,4 @@
-Description: Integrates thw AWS services to GitHub
+Description: Integrates the AWS services to GitHub
 
 Parameters:
   GitHubAccount:
