@@ -1,3 +1,4 @@
+import pytest
 from typer.testing import CliRunner
 
 from mytoolbox import __app_name__, __version__, cli
@@ -5,7 +6,8 @@ from mytoolbox import __app_name__, __version__, cli
 runner = CliRunner()
 
 
-def test_version() -> None:
-    result = runner.invoke(cli.app, "--version")
+@pytest.mark.parametrize("command", ["-V", "--version"])
+def test_version(command):
+    result = runner.invoke(cli.app, command)
     assert result.exit_code == 0
     assert f"{__app_name__} v{__version__}\n" in result.stdout

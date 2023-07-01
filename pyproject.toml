@@ -42,6 +42,7 @@ profile = "black"
 
 [tool.mypy]
 strict = true
+exclude = ["tests"]
 
 [tool.bandit]
 exclude_dirs = ["tests"]
