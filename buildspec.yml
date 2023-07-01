@@ -3,7 +3,7 @@ version: 0.2
 env:
   git-credential-helper: yes
   variables:
-    - PIPENV_VENV_IN_PROJECT: "1"
+    PIPENV_VENV_IN_PROJECT: "1"
 
 phases:
   install:
