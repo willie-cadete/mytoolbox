@@ -1,5 +1,7 @@
 # mytoolbox
 
+[![PyPI](https://img.shields.io/pypi/v/mytoolbox)](https://pypi.org/project/mytoolbox/)
+
 MyToolbox is a CLI to automate boring stuff on a daily basis of a system engineer or developer.
 
 ## Project task tracking / todo list
