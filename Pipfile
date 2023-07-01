@@ -18,6 +18,7 @@ bpython = "*"
 pre-commit = "*"
 mkdocs-material = "*"
 mkdocstrings-python = "*"
+bandit = "*"
 
 [requires]
 python_version = "3.11"

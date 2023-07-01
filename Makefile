@@ -35,6 +35,9 @@ clean-build:
 test:
 	pytest -v
 
+security:
+	bandit -q -r src/mytoolbox
+
 build: clean
 	flit build --format wheel
 	ls -l dist
