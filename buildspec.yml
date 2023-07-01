@@ -22,7 +22,9 @@ phases:
   post_build:
     commands:
       - pipenv run flit build --format wheel
-      - pipenv run mkdocs gh-deploy --clean --force
+      - ls -la
+      - git remote -v
+      - pipenv run mkdocs gh-deploy -v --clean --force
 artifacts:
   files:
     - dist/*
