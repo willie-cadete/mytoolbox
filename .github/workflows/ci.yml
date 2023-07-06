@@ -30,7 +30,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install --dev --deploy
-        pipev run flit install --deps production
+        pipenv run flit install --deps production
 
     - name: Lint with flake8 ${{ matrix.python-version }}
       run: |
