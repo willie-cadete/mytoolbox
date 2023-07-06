@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python package
+name: CI
 
 on:
   push:
@@ -25,17 +25,19 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pipenv'
-    - name: Install dependencies
+    - name: Install dependencies ${{ matrix.python-version }}
       run: |
         python -m pip install --upgrade pip
         pip install pipenv
-        pipenv install --dev --system --skip-lock
-    - name: Lint with flake8
+        pipenv install --dev --deploy
+        pipev run flit install --deps production
+
+    - name: Lint with flake8 ${{ matrix.python-version }}
       run: |
-        # stop the build if there are Python syntax errors or undefined names
-        pipenv run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        pipenv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
+        pipenv run flake8
+    - name: Lint with mypy ${{ matrix.python-version }}
       run: |
-        pipenv run pytest tests/
+        pipenv run mypy . --strict
+    - name: Run tests ${{ matrix.python-version }}
+      run: |
+        pipenv run pytest -v
