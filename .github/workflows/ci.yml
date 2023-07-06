@@ -37,6 +37,7 @@ jobs:
         pipenv run flake8
     - name: Lint with mypy ${{ matrix.python-version }}
       run: |
+        pipenv run install tomli
         pipenv run mypy . --strict
     - name: Run tests ${{ matrix.python-version }}
       run: |
