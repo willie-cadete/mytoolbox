@@ -1,6 +1,10 @@
 # mytoolbox
 
 [![PyPI](https://img.shields.io/pypi/v/mytoolbox)](https://pypi.org/project/mytoolbox/)
+![PyPI - License](https://img.shields.io/pypi/l/mytoolbox)
+[![CI](https://github.com/willie-cadete/mytoolbox/actions/workflows/ci.yml/badge.svg)](https://github.com/willie-cadete/mytoolbox/actions/workflows/ci.yml)
+![Docs](https://github.com/willie-cadete/mytoolbox/actions/workflows/pages/pages-build-deployment/badge.svg)
+[![image](https://img.shields.io/pypi/pyversions/mytoolbox.svg)](https://python.org/pypi/mytoolbox)
 
 MyToolbox is a CLI to automate boring stuff on a daily basis of a system engineer or developer.
 
